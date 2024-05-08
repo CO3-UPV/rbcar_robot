@@ -1,0 +1,34 @@
+#Encoder counts moving direction right and left (Direction Absolute Encoder)
+abs_encoder_left: 2666
+abs_encoder_right: 3598
+# Encoder counts moving direction right and left (Motor Encoder)
+motor_encoder_left: -59121
+motor_encoder_right: 56416
+#
+abs_encoder_resolution: 4096
+# +- angle able to reach (radians)
+steering_angle_resolution: 0.4538
+# Position of the absolute encoder of the real zero position
+abs_encoder_zero_position: 3109
+
+# valores de la recta y=Ax+B.
+
+value_calibrate_a: 0.0012946926
+value_calibrate_b: 4.022851115
+
+#angulos en valor absoluto (float).#En si funciona la linealizacion del volante se borrara hasta el extrem_points_right, excepto.
+extrem_angle_left: 0.56 #Nueva version volante V2.0 Gasta este parametro 0.65, solo se gasta en la función para colocar el volante.
+middle_angle_left: 0.50560 # Candidato a ser borrado.
+center_angle: 0.00  #Candidato a ser borrado.
+middle_angle_right: 0.51560 #Candidato a ser borrado.
+extrem_angle_right: 0.625 #Nueva version volante V2.0 Gasta este parametro 0.65, solo se gasta en la función para colocar el volante.
+
+#puntos (int).
+extrem_points_left: 2675 #Nueva version Volante V2.0 Gasta este parametro.
+middle_points_left: 2746 #Candidato a ser borrado.
+center_points: 3109 #Candidato a ser borrado.
+middle_points_right: 3520 #Candidato a ser borrado.
+extrem_points_right: 3590 #Nueva version Volante V2.0 Gasta este parametro.
+
+#number of points in steering center, it's gonna be considered zero (int), if you want calculate, the total number of points considered 0, you have to multiply this number by 2, because its considered only one side, on the source code.
+number_points_considered_zero: 20 

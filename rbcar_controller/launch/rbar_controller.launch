@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Combine joint values -->
+  <node name="rbcar_controller" pkg="rbcar_controller" type="rbcar_controller"  output="screen">
+  	<rosparam command="load" file="$(find rbcar_controller)/config/rbcar_controller.yaml" />
+  </node>
+</launch>

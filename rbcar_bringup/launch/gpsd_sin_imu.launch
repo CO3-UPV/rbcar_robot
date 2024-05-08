@@ -1,0 +1,11 @@
+<launch>
+  <node name="frame_gpsd" pkg="gpsd_vbox3i" type="frame_gpsd" />
+  <node name="vbox3i" pkg="gpsd_vbox3i" type="publisher" args="sin_imu p 20 raw NavSatFix TimeReference GPSFix UTM">
+     <param name="device_addr" value="/dev/ttyUSB4" type="string"/>
+     <param name="gps_frame_id" value="vbox3i_gps" type="string"/>
+     <param name="imu_frame_id" value="vbox3i_imu" type="string"/>
+  </node>
+  <param name="/panel/gps_topic" value="/vbox3i/NavSatFix" type="string" />
+  <param name="/panel/nb_cycles" value="5" type="int" />
+</launch>
+

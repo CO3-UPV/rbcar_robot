@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start curtis_controller node -->
+  <node pkg="curtis_controller" type="curtis_controller_node" name="curtis_controller" output="screen">
+	<param name="desired_freq" value="25.0"/>
+	<param name="can_port" value="/dev/pcanpci0" type="string"/>
+	<param name="watchdog_command" value="true"/>
+	<param name="mode" value="1"/> <!-- MODE_THROTTLE=0 / MODE_TWIST=1 -->
+  </node>
+
+</launch>
+

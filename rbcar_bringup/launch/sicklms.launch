@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- start hokuyo node -->
+	<node name="sicklms" pkg="sicktoolbox_wrapper" type="sicklms">
+	     <param name="frame_id" value="slms_laser_link" type="string"/>
+	     <param name="port" value="/dev/ttyUSB0" type="string"/>
+
+	     <param name="bauds" value="38400" type="int"/>
+	     <param name="connect_delay" value="15" type="double"/>
+	</node>
+</launch>

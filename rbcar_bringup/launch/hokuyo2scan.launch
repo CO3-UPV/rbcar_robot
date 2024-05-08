@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start purepursuit node -->
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan_node" output="screen">
+	<remap from="cloud_in" to="/hokuyo3d/hokuyo_cloud2"/>
+	<remap from="scan" to="/hokuyo3d/scan" />
+	<param name="target_frame" value="hokuyo3d_scan_link" type="string"/>
+	<param name="min_height" value="0.5" type="double"/>
+	<param name="max_height" value="0.6" type="double"/>
+	<param name="scan_time" value="0.1" type="double"/>
+	<param name="range_min" value="0.45" type="double"/>
+	<param name="range_max" value="10.0" type="double"/>
+	
+  </node>
+
+</launch>
+

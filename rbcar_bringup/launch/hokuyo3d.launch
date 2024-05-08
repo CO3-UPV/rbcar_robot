@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="scan" default="false" />
+  
+  <node pkg="hokuyo3d" type="hokuyo3d" name="hokuyo3d" output="screen">
+	<param name="frame_id" value="hokuyo3d_laser_link" type="string"/>
+	<param name="ip" value="192.168.0.10" type="string"/>
+  </node>
+  <group if="$(arg scan)" >
+  	<include file="$(find rbcar_bringup)/launch/hokuyo2scan.launch"/>
+   </group>
+</launch>
+

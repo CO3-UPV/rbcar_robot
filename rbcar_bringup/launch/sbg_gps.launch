@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- start sbg node -->
+	<node name="sbg_node" pkg="sbg" type="sbg_node">
+	     <param name="imu_frame_id" value="imu" type="string"/>
+	     <param name="gps_frame_id" value="gps_1" type="string"/>
+	     <param name="dev" value="/dev/ttyUSB1" type="string"/>
+	</node>
+</launch>

@@ -1,0 +1,18 @@
+# Joint names
+left_rear_joint: left_rear_axle
+right_rear_wheel_joint: right_rear_axle
+left_front_joint: left_front_axle
+right_front_joint: right_front_axle
+left_steering_joint: left_steering_joint
+right_steering_joint: right_steering_joint
+# VELOCITY CONTROL
+curtis_data_topic: /curtis_controller/master_drive
+cmd_vel_topic: /curtis_controller/command_twist
+# STEERING CONTROLLER STATUS
+steering_position_topic: /rbcar_steering_controller/status
+# COMMAND TO SET THE STEERING ANGLE POSITION
+cmd_pos_topic: /rbcar_steering_controller/command_angle
+# Publish tf?
+publish_tf: true
+# Allowed speed
+max_speed: 2.5

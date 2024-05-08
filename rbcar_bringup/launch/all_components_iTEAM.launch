@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start Hokuyo 3d node -->
+  <!--include file="$(find rbcar_bringup)/launch/hokuyo3d.launch">
+   <arg name="scan" value="true" />
+  </include-->
+
+  <!-- start robot_state_publisher - publish fixed transforms, load robot model to param server -->
+  <include file="$(find rbcar_description)/launch/rbcar_state_robot.launch"/>
+
+  <!-- start curtis_controller node (Traction motor) -->
+  <include file="$(find rbcar_bringup)/launch/curtis_controller.launch"/>
+ 
+  <!-- start steering motor node -->
+  <include file="$(find rbcar_bringup)/launch/rbcar_steering_controller.launch" />
+
+  <!-- start rbcar controller node -->
+  <include file="$(find rbcar_bringup)/launch/rbcar_controller.launch" />
+
+ 
+  <!-- nodo laser 2d -->
+  <!--include file="$(find rbcar_bringup)/launch/hokuyo2d.launch" /-->
+  <include file="$(find rbcar_bringup)/launch/sicklms.launch"/>
+  
+  <!-- NODO gps -->
+  <!--include file="$(find rbcar_bringup)/launch/sbg_gps.launch"/-->
+  <!--include file="$(find rbcar_bringup)/launch/gpsd_sin_imu.launch"/--> 
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+     <arg name="port" value="9090"/>
+  </include>
+</launch>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- start rbcar_steering_controller node -->
+  <node pkg="rbcar_steering_controller" type="rbcar_steering_controller" name="rbcar_steering_controller" output="screen">
+    <param name="port" type="string" value="/dev/pcanpci1"/>
+    <rosparam command="load" file="$(find rbcar_bringup)/config/steering_controller_config.yaml" />
+  </node>
+
+</launch>
+

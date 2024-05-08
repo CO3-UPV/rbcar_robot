@@ -1,0 +1,6 @@
+wheel_diameter: 0.45
+max_rpm: 6000
+max_v_auto: 2.5
+gear_ratio: 16.0
+motor_direction: 1
+

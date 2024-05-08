@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- start hokuyo node -->
+	<node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node">
+	     <param name="frame_id" value="hokuyo1_laser_link" type="string"/>
+	</node>
+</launch>

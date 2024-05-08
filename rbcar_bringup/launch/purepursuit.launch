@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start purepursuit node -->
+  <node pkg="robotnik_pp_planner" type="robotnik_pp_planner_node" name="robotnik_pp_planner" output="screen">
+	<!-- Options: MAP, ODOM -->	
+	<param name="position_source" value="ODOM" type="string"/>
+	<param name="target_frame" value="base_footprint" type="string"/>
+	<param name="d_lookahear_min" value="0.4"/>
+  	<param name="kr" value="0.2"/>
+	<param name="desired_freq" value="50.0"/>
+    <param name="d_dist_wheel_to_center" value="0.825"/>
+	<param name="command_type" value="Ackermann"/>
+ 	<param name="odom_topic" value="/rbcar_controller/odom"/>
+    <param name="cmd_topic_vel" value="/rbcar_controller/command"/>
+  </node>
+
+</launch>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- start robur_steering_controller node -->
+  <node pkg="dzcante_steering_controller" type="dzcante_steering_controller" name="dzcante_steering_controller2" output="screen">
+    <param name="port" type="string" value="/dev/pcanpci1"/>
+  </node>
+
+</launch>
+
